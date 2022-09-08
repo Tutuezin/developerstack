@@ -1,0 +1,75 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "developerstack",
+  "dateExported": "2022-09-08T18:10:00.886Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "ffb2ce2a-f1d2-4d18-9a50-bdf5bb910672",
+      "colId": "5e7c8916-00c1-45ae-95d3-5e2b8a2c7bb9",
+      "containerId": "",
+      "name": "Create Question",
+      "url": "localhost:5000/questions",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2022-09-08T18:03:20.445Z",
+      "modified": "2022-09-08T18:05:28.689Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n\t\"askedBy\": \"Ciclano Santos\",\n\t\"question\": \"Como é que faz tal coisa\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "de34249f-8bce-4026-8624-ee624c93c314",
+      "colId": "5e7c8916-00c1-45ae-95d3-5e2b8a2c7bb9",
+      "containerId": "",
+      "name": "Create Answers",
+      "url": "localhost:5000/questions/{id}/answers",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2022-09-08T18:06:16.289Z",
+      "modified": "2022-09-08T18:07:42.870Z",
+      "headers": [],
+      "params": [{ "name": "id", "value": "", "isPath": true }],
+      "body": {
+        "type": "json",
+        "raw": "{\n\t\"answeredBy\": \"Fulano Silva\",\n\t\"answer\": \"É simples, isso é um teste\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "07edc557-34ac-4a66-a922-2f90e866c183",
+      "colId": "5e7c8916-00c1-45ae-95d3-5e2b8a2c7bb9",
+      "containerId": "",
+      "name": "Get all questions",
+      "url": "localhost:5000/questions",
+      "method": "GET",
+      "sortNum": 30000,
+      "created": "2022-09-08T18:08:29.254Z",
+      "modified": "2022-09-08T18:09:05.875Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "4623add1-5985-44dc-b13c-912816f43de9",
+      "colId": "5e7c8916-00c1-45ae-95d3-5e2b8a2c7bb9",
+      "containerId": "",
+      "name": "Get question by id",
+      "url": "localhost:5000/questions/{id}",
+      "method": "GET",
+      "sortNum": 40000,
+      "created": "2022-09-08T18:09:12.538Z",
+      "modified": "2022-09-08T18:09:46.691Z",
+      "headers": [],
+      "params": [{ "name": "id", "value": "", "isPath": true }],
+      "tests": []
+    }
+  ]
+}
