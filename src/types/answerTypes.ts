@@ -1,4 +1,3 @@
-export interface IAnswerData {
-  answeredBy: string;
-  answer: string;
-}
+import { answers } from "@prisma/client";
+
+export type IAnswerData = Omit<answers, "id">;
