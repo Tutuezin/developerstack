@@ -12,14 +12,17 @@ export async function getQuestions() {
 export async function getQuestionsById(id: number) {
   const questionById = await prisma.questions.findUnique({
     where: { id },
-  });
-
-  const answerById = await prisma.questions.findUnique({
-    where: { id },
-    select: {
-      answers: {},
+    include: {
+      answers: true,
     },
   });
 
-  return { questionById, answerById };
+  // const answerById = await prisma.questions.findUnique({
+  //   where: { id },
+  //   select: {
+  //     answers: {},
+  //   },
+  // });
+
+  return { questionById };
 }
